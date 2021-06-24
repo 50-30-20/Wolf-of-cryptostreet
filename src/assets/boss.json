@@ -1,0 +1,103 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 40,
+				"h": 260
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bmwg_anims_f2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 66
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 66
+					}
+				},
+				{
+					"filename": "bmwg_anims_f3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 66
+					},
+					"frame": {
+						"x": 0,
+						"y": 66,
+						"w": 40,
+						"h": 66
+					}
+				},
+				{
+					"filename": "bmwg_anims_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 40,
+						"h": 64
+					},
+					"frame": {
+						"x": 0,
+						"y": 132,
+						"w": 40,
+						"h": 64
+					}
+				},
+				{
+					"filename": "bmwg_anims_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 66
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 64
+					},
+					"frame": {
+						"x": 0,
+						"y": 196,
+						"w": 40,
+						"h": 64
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}
