@@ -1,51 +1,49 @@
-# Game3.js (The Web 3.0 Game Framework)
+# Phaser 3 Webpack Project Template
 
-👋 Thank you for checking out Game3.js!
+A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
 
-### **Heads up! ⚠** 
+This has been updated for Phaser 3.50.0 version and above.
 
-Please take note that this project is still under heavy development.
+Loading images via JavaScript module `import` is also supported, although not recommended.
 
-Don't hesitate to file a Github issue or reach out to us on <a href="../../discussions">Github Discussions</a> if you have any questions. 
+## Requirements
 
-## 🚀 Quickstart
+[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
 
-### 1. Install required software
+## Available Commands
 
- * [Node.js](https://nodejs.org/en/download/)
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install project dependencies |
+| `npm start` | Build project and open web server running project |
+| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
-### 2. Fork the repository
+## Writing Code
 
-* [![Fork Game3.js](https://img.shields.io/github/forks/alto-io/game3.js.svg?style=social&label=Fork%20Game3.js&maxAge=2592000)](https://GitHub.com/alto-io/game3.js/fork)
+After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
 
-### 3. Run the example game
+After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
 
-The repo includes the example Breakout game from [Phaser 3.0](http://phaser.io/).
+## Customizing the Template
 
-From inside project directory:
+### Babel
 
-* `npm install`
-* `npm start`
+You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
 
-## 4. Deploy on IPFS
+ ```
+"browsers": [
+  ">0.25%",
+  "not ie 11",
+  "not op_mini all"
+]
+ ```
 
-To deploy on IPFS we need to do the following steps:
+### Webpack
 
-* Retrieve API keys from [Pinata](https://pinata.cloud/)
+If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
 
-  * PINATA_API_KEY
-  * PINATA_API_SECRET_KEY
+## Deploying Code
 
-* Input these keys as <a href="../../settings/secrets/actions">Repository Secrets</a>
+After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
 
-* Go to the <a href="../../actions/workflows/release.yaml">Release Workflow</a> on Github Actions and click `Run Workflow`
-
-* The game is now deployed and can be accessed using the IPFS gateways listed on the <a href="../../releases">Release Notes</a>
-
-## Game3.js Overview
-
-![Game3.js Overview](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/alto-io/game3.js/main/plantuml/overview.txt)
-
-## Licenses
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/alto-io/game3.js/blob/master/LICENSE)
+If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.
