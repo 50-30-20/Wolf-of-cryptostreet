@@ -1,0 +1,355 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 119,
+				"h": 495
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "boy_anims_f1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_f3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 62,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_right_f1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 124,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_right_f3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 186,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_up_f1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 248,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_up_f3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 310,
+						"w": 40,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_left_f3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 62
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 37,
+						"h": 62
+					},
+					"frame": {
+						"x": 0,
+						"y": 372,
+						"w": 37,
+						"h": 62
+					}
+				},
+				{
+					"filename": "boy_anims_left_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 40,
+						"h": 61
+					},
+					"frame": {
+						"x": 0,
+						"y": 434,
+						"w": 40,
+						"h": 61
+					}
+				},
+				{
+					"filename": "boy_anims_f0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					},
+					"frame": {
+						"x": 37,
+						"y": 372,
+						"w": 40,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_f2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					},
+					"frame": {
+						"x": 40,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_right_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					},
+					"frame": {
+						"x": 40,
+						"y": 60,
+						"w": 40,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_right_f2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					},
+					"frame": {
+						"x": 40,
+						"y": 120,
+						"w": 40,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_up_f0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 60
+					},
+					"frame": {
+						"x": 40,
+						"y": 180,
+						"w": 40,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_left_f2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 39,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 39,
+						"h": 60
+					},
+					"frame": {
+						"x": 40,
+						"y": 240,
+						"w": 39,
+						"h": 60
+					}
+				},
+				{
+					"filename": "boy_anims_left_f0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 59
+					},
+					"frame": {
+						"x": 40,
+						"y": 300,
+						"w": 40,
+						"h": 59
+					}
+				},
+				{
+					"filename": "boy_anims_up_f2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 58
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 58
+					},
+					"frame": {
+						"x": 79,
+						"y": 240,
+						"w": 40,
+						"h": 58
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

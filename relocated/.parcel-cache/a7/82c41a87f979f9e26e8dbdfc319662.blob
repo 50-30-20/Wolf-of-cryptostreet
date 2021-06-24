@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Game3.js Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="57ebb32159a4d9e3c71bb857498c7f9c"></script> 
+    <script src="285ce0c6fa703e294ee3f9ee8daafa3f"></script> 
+    <style data-parcel-key="b4e707a9066ea9f37191368c6f1569ea">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="phaser-example"></div>
+
+</body>
+</html>

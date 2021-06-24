@@ -1,0 +1,43 @@
+{
+  "name": "@polats/booter",
+  "version": "0.1.0",
+  "description": "Created by Booter 🥾: A zero-config project template to deploy and publish open-source web games",
+  "author": "Paul Gadi <paul@outplay.games>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alto-io/game3.js.git",
+    "directory": "packages/booter"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "serve": "serve ../../docs/booter",
+    "dev": "concurrently --kill-others-on-fail \"webpack --watch\" \"npm run serve\"",
+    "build": "webpack",
+    "np": "np"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "html-replace-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "^4.5.0",
+    "np": "^7.0.0",
+    "serve": "^11.3.2",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.2",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/alto-io/game3.js/issues"
+  },
+  "homepage": "https://github.com/alto-io/game3.js/tree/main/packages/booter",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
+}
