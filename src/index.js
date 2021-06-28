@@ -72,7 +72,13 @@ class MyGame extends Phaser.Scene
     }
 
     handleBoyBossCollider(obj1, obj2){
-        const boss = obj2
+        const bossObj = obj2
+
+        const dx = boy.x - bossObj.x
+        const dy = boy.y - bossObj.y
+        const dir = new Phaser.Math.Vector2(dy, dx).normalize().scale(250)
+        console.log("dx", dir)
+
         hit = 1
         if(hit == 1){
         count = count + 1}
@@ -84,11 +90,19 @@ class MyGame extends Phaser.Scene
     } 
 
     handleBoyBoss2Collider(obj1, obj2){
-        const boss2 = obj2
+         boy = obj1
+         boss = obj2
+
+        const dx = boy.x - boss.x
+        const dy = boy.y - boss.y
+        const dir = new Phaser.Math.Vector2(dy, dx).normalize().scale(250)
+        console.log("dx", dir)
+
+
         hit = 1
         if(hit == 1){
         count = count - 1}
-            if(count == 0){
+            if(count == -1){
                 count = 0
                 hit = 0
             }
