@@ -34,7 +34,7 @@ import { createDogekeyAnims } from './Animations/DogekeyAnims'
 import { createUnikeyAnims } from './Animations/unikeyAnims'
 import { createUSDTkeyAnims } from'./Animations/usdtAnims'
 import { createETHkeyAnims } from './Animations/ethkeyAnims';
-import { shuffle } from 'underscore';
+import { first, shuffle } from 'underscore';
 
 let speed = 200
 var boy
@@ -55,14 +55,16 @@ let keyEth = 0
 let keyUni = 0
 let keyUSDT = 0
 
+let win
 
 let playerArr = []
 let finalArr = ['eth', 'doge', 'uni', 'usdt']
 let newWin = ['eth', 'doge', 'uni', 'usdt']
 var gameover = false
 
+let firstArr = []
 
-var win = false
+
 var loose
 var Sbutton
 
@@ -128,12 +130,13 @@ class MyGame extends Phaser.Scene
             }
         })
 
-        finalArr = ['doge', 'eth', 'uni', 'usdt']
-        console.log('fiAR', finalArr)
+        // finalArr = ['doge', 'eth', 'uni', 'usdt']
+        // console.log('fiAR', finalArr)
+
         // setInterval(()=>{
-        //     // finalArr.sort(()=>Math.random() - 0.5);
-        //     // shuffle(finalArr)
-        //     
+        //     finalArr.sort(()=>Math.random() - 0.5);
+        //     shuffle(finalArr)
+            
             
         //     this.arrayText = this.add.text(25, 160, finalArr, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
         //     this.arrayText.setStroke('#000', 6);
@@ -144,16 +147,26 @@ class MyGame extends Phaser.Scene
         //     console.log('fiAR', finalArr)  
         // }, 30000)
 
-        setInterval(()=>{
-            if(win == true){
-                playerArr = []
-                win = false
-            }
-        }, 32000)
+        firstArr = ['doge', 'eth']
+        console.log('firstArr', firstArr)
     
         cursors = this.input.keyboard.createCursorKeys();
     }
 
+
+
+    gamee(){
+        finalArr.sort(()=>Math.random() - 0.5);
+        shuffle(finalArr)
+        
+        this.arrayText = this.add.text(25, 160, finalArr, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
+        this.arrayText.setStroke('#000', 6);
+        
+        setInterval(()=>{
+            this.arrayText.destroy()
+        }, 4000)
+        console.log('fiAR', finalArr) 
+       }  
       
     create ()
     {
@@ -244,6 +257,10 @@ class MyGame extends Phaser.Scene
         this.physics.add.collider(boy, dogekeys, this.handleBoyKeyCollide, undefined, this)
         this.physics.add.collider(boy, unikeys, this.handlePlayerUniKeyCollide, undefined, this)
         this.physics.add.collider(boy, usdtkeys, this.handlePlayerUSDTkeyCollide, undefined, this)
+
+        setTimeout(()=>{
+            this.gamee();
+        }, 3000)
     }
 
     restartGame(){
@@ -340,27 +357,72 @@ class MyGame extends Phaser.Scene
             keyUni = keyUni - 1
         }
         console.log('keyminusD', keyDoge)
-
+  
         const arr = _.isEqual(playerArr, finalArr)
-        console.log('arr', arr)
-
-        if(arr === true){
-            win = true
-            playerArr = []
-            console.log('win')
-            console.log('playerArr', playerArr) 
-        }
-
-        if(arr === false){
+        console.log("nice", arr)
+        if(arr == true){
+            setTimeout(()=>{
+                this.gamee();
+                playerArr = []
+            }, 3000)
+            
+            console.log("win first array")
+        }else{
             this.physics.pause();
             this.gameOverText.visible = true
             Sbutton.visible = true
             this.registry.destroy();
-            console.log('losser')
+            console.log("losse first arr")
         }
+        
+
+        // const arr = _.isEqual(playerArr, finalArr)
+        // console.log('arr', arr)
+
+        // if(arr === true){
+        //     win = true
+        //     playerArr = []
+        //     gamee();
+        //     console.log('win')
+        //     console.log('playerArr', playerArr) 
+        // }
+
+        // if(arr === false){
+        //     this.physics.pause();
+        //     this.gameOverText.visible = true
+        //     Sbutton.visible = true
+        //     this.registry.destroy();
+        //     console.log('losser')
+        // }
     }
 
+    // check(){
+    //     setTimeout(()=>{
+    //         const win = () =>{
+    //             if(arr == true){
+    //                 win = true
+    //                 setTimeout(()=>{
+    //                     this.gamee();
+    //                     playerArr = []
+    //                 }, 3000)
+                    
+    //                 console.log("win first array")
+    //             }else{
+    //                 this.physics.pause();
+    //                 this.gameOverText.visible = true
+    //                 Sbutton.visible = true
+    //                 this.registry.destroy();
+    //                 console.log("losse first arr")
+    //             }
+    //         }
+    //         setInterval(()=>{
+    //             win();
+    //         }, 4000)
+    //     }, 4000)
+    // }
+    
     update(){   
+        
         if (cursors.left.isDown){
             boy.setVelocity(-speed, 0);
             boy.anims.play('boy-run-left', true)
