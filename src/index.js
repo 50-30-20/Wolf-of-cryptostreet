@@ -58,7 +58,7 @@ let keyUSDT = 0
 let win
 
 let playerArr = []
-let finalArr = ['eth', 'doge', 'uni', 'usdt']
+let finalArr = ['eth', 'dai', 'uni', 'usdt']
 let newWin = ['eth', 'doge', 'uni', 'usdt']
 var gameover = false
 
@@ -129,26 +129,6 @@ class MyGame extends Phaser.Scene
                 keyh.body.onCollide = true;
             }
         })
-
-        // finalArr = ['doge', 'eth', 'uni', 'usdt']
-        // console.log('fiAR', finalArr)
-
-        // setInterval(()=>{
-        //     finalArr.sort(()=>Math.random() - 0.5);
-        //     shuffle(finalArr)
-            
-            
-        //     this.arrayText = this.add.text(25, 160, finalArr, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        //     this.arrayText.setStroke('#000', 6);
-            
-        //     setInterval(()=>{
-        //         this.arrayText.destroy()
-        //     }, 7000)
-        //     console.log('fiAR', finalArr)  
-        // }, 30000)
-
-        firstArr = ['doge', 'eth']
-        console.log('firstArr', firstArr)
     
         cursors = this.input.keyboard.createCursorKeys();
     }
@@ -196,7 +176,7 @@ class MyGame extends Phaser.Scene
        
         boss = this.physics.add.sprite(386, 220, 'boss').setImmovable(true);
         boss.body.setSize(boss.width * 1.2, boss.height * 1.2)
-        var stroke = this.bossText = this.add.text(348, 153, "DOGE", {fontSize: "28px",fontweight:"bold", fill: "#fff"})
+        var stroke = this.bossText = this.add.text(356, 153, "DAI", {fontSize: "28px",fontweight:"bold", fill: "#fff"})
         this.bossText.setStroke('#000', 6);
         
         boss2 = this.physics.add.sprite(690, 220, 'boss').setImmovable();
@@ -222,18 +202,6 @@ class MyGame extends Phaser.Scene
         this.gameOverText = this.add.text(600, 420, 'GAME OVER', style)
         this.gameOverText.setOrigin(0.5);
         this.gameOverText.visible = false;
-
-        // this.dogeText = this.add.text(20, 20, "Doge Coin:" + dogeCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        // this.dogeText.setStroke('#000', 6);
-
-        // this.ethText = this.add.text(20, 60, "Ethereum Coin:" + etherumCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        // this.ethText.setStroke('#000', 6);
-
-        // this.uniText = this.add.text(20, 100, "Uniswap Coin:" + UniSwapCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        // this.uniText.setStroke('#000', 6);
-        
-        // this.USDTText = this.add.text(20, 140, "USDT Coi n:" + USDTCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        // this.USDTText.setStroke('#000', 6);
 
         this.physics.world.setBounds(0, 0, 2000, 2000)
         this.cameras.main.setBounds(0, 0, 2000, 2000)
@@ -278,7 +246,7 @@ class MyGame extends Phaser.Scene
     handleBoyKeyCollide(obj1, obj2){
         if(keyDoge == 0){
             keyDoge = keyDoge + 1
-            playerArr.push('doge')
+            playerArr.push('dai')
         }
         console.log("keyDoge", keyDoge)
         console.log("playerArD", playerArr)
@@ -356,6 +324,9 @@ class MyGame extends Phaser.Scene
         if(keyUni == 1){
             keyUni = keyUni - 1
         }
+        if(keyUSDT == 1){
+            keyUSDT = keyUSDT - 1
+        }
         console.log('keyminusD', keyDoge)
   
         const arr = _.isEqual(playerArr, finalArr)
@@ -365,8 +336,16 @@ class MyGame extends Phaser.Scene
                 this.gamee();
                 playerArr = []
             }, 3000)
-            
+          
+            this.winText = this.add.text(600, 420, "You won 1st round!!", {fontSize: "32px",fontweight:"bold", fill: "#fff"})
+            this.winText.setStroke('#000', 6);
+            this.winText.setOrigin(0.5);
+            this.win2Text = this.add.text(600, 460, "Perfect Swap", {fontSize: "28px",fontweight:"bold", fill: "#fff"})
+            this.win2Text.setStroke('#000', 6);
+            this.win2Text.setOrigin(0.5);
             console.log("win first array")
+            
+
         }else{
             this.physics.pause();
             this.gameOverText.visible = true
@@ -375,54 +354,19 @@ class MyGame extends Phaser.Scene
             console.log("losse first arr")
         }
         
+        if(arr == true){
+            setInterval(()=>{
+                this.winText.destroy();
+                this.win2Text.destroy();
+            }, 3000)
+        }
 
-        // const arr = _.isEqual(playerArr, finalArr)
-        // console.log('arr', arr)
-
-        // if(arr === true){
-        //     win = true
-        //     playerArr = []
-        //     gamee();
-        //     console.log('win')
-        //     console.log('playerArr', playerArr) 
-        // }
-
-        // if(arr === false){
-        //     this.physics.pause();
-        //     this.gameOverText.visible = true
-        //     Sbutton.visible = true
-        //     this.registry.destroy();
-        //     console.log('losser')
-        // }
+        
     }
-
-    // check(){
-    //     setTimeout(()=>{
-    //         const win = () =>{
-    //             if(arr == true){
-    //                 win = true
-    //                 setTimeout(()=>{
-    //                     this.gamee();
-    //                     playerArr = []
-    //                 }, 3000)
-                    
-    //                 console.log("win first array")
-    //             }else{
-    //                 this.physics.pause();
-    //                 this.gameOverText.visible = true
-    //                 Sbutton.visible = true
-    //                 this.registry.destroy();
-    //                 console.log("losse first arr")
-    //             }
-    //         }
-    //         setInterval(()=>{
-    //             win();
-    //         }, 4000)
-    //     }, 4000)
-    // }
     
     update(){   
-        
+       
+
         if (cursors.left.isDown){
             boy.setVelocity(-speed, 0);
             boy.anims.play('boy-run-left', true)
