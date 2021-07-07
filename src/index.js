@@ -219,8 +219,12 @@ class MyGame extends Phaser.Scene
         // this.uniText = this.add.text(20, 100, "Uniswap Coin:" + UniSwapCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
         // this.uniText.setStroke('#000', 6);
         
-        // this.USDTText = this.add.text(20, 140, "USDT Coin:" + USDTCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
+        // this.USDTText = this.add.text(20, 140, "USDT Coi n:" + USDTCoin, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
         // this.USDTText.setStroke('#000', 6);
+
+        this.physics.world.setBounds(0, 0, 2000, 2000)
+        this.cameras.main.setBounds(0, 0, 2000, 2000)
+        this.cameras.main.startFollow(boy, true, 0.5, 0.5);
 
         this.physics.add.collider(boy, computers)
     
