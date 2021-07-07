@@ -203,9 +203,9 @@ class MyGame extends Phaser.Scene
         this.gameOverText.setOrigin(0.5);
         this.gameOverText.visible = false;
 
-        this.physics.world.setBounds(0, 0, 2000, 2000)
-        this.cameras.main.setBounds(0, 0, 2000, 2000)
-        this.cameras.main.startFollow(boy, true, 0.5, 0.5);
+        // this.physics.world.setBounds(0, 0, 2000, 2000)
+        // this.cameras.main.setBounds(0, 0, 2000, 2000)
+        // this.cameras.main.startFollow(boy, true, 0.5, 0.5);
 
         this.physics.add.collider(boy, computers)
     
@@ -400,7 +400,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true,
+            debug: false,
             gravity: { y: 0 }
         }
     }
