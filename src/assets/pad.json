@@ -1,0 +1,40 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 498,
+				"h": 512
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "gamepad.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 512,
+						"h": 512
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 498,
+						"h": 512
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 498,
+						"h": 512
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

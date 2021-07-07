@@ -1,0 +1,61 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 28,
+				"h": 31
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "dogeKey_anims_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 28,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 28,
+						"h": 31
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 31
+					}
+				},
+				{
+					"filename": "dogeKey_anims_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 28,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 28,
+						"h": 31
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 31
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}
