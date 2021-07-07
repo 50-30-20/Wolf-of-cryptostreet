@@ -39,6 +39,8 @@ module.exports = {
       skipDryRun: true
     }
   },
+  contracts_directory: './contracts/',
+  contracts_build_directory: './abis/',
   compilers: {
     solc: {
       version: '0.8.0+commit.c7dfd78e',

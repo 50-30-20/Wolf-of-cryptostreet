@@ -10,7 +10,7 @@ import {SafeMath} from './utils/math/SafeMath.sol';
 import "./uniswap/IUniswapV2Router02.sol";
 import "./uniswap/IUniswapV2Factory.sol";
 
-contract Flashloan is FlashLoanReceiverBase {
+contract FlashSwap is FlashLoanReceiverBase {
     using SafeMath for uint256;
     
     IUniswapV2Router02 public uniswapRouter;
