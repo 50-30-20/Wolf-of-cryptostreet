@@ -1,4 +1,10 @@
+<h1 align="center"> Wolf Of CryptoStreet</h1>
 
+# About Project
+
+* Help adrian the game character to be the wolf of the cryptostreet. <br />
+* With the markets trends request for the key to swap and with the help of broker execute an perfect swap. <br />
+* The game is built with phaser 3 and deployed on kovan network.<br />
 
 <h1>Glimpse of the Game</h1>
 <img src="https://i.imgur.com/52aX0nU.png" width="500" height="400" />
