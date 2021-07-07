@@ -18,6 +18,11 @@ Loading images via JavaScript module `import` is also supported, although not re
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
+<h1>Glimpse of the Game</h1>
+<img src="https://i.imgur.com/52aX0nU.png" width="500" height="400" />
+<img src ='https://i.imgur.com/eCnhHHe.png' width="500" height='400' />
+<img src="https://i.imgur.com/S0G9xtB.png" width="500" height="400" />
+
 ## Writing Code
 
 After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
