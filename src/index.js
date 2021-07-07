@@ -128,28 +128,28 @@ class MyGame extends Phaser.Scene
             }
         })
 
-        finalArr = ['doge', 'eth', 'uni', 'usdt']
-        console.log('fiAR', finalArr)
-        // setInterval(()=>{
-        //     // finalArr.sort(()=>Math.random() - 0.5);
-        //     // shuffle(finalArr)
-        //     
-            
-        //     this.arrayText = this.add.text(25, 160, finalArr, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
-        //     this.arrayText.setStroke('#000', 6);
-            
-        //     setInterval(()=>{
-        //         this.arrayText.destroy()
-        //     }, 7000)
-        //     console.log('fiAR', finalArr)  
-        // }, 30000)
-
+        // finalArr = ['doge', 'eth', 'uni', 'usdt']
+        // console.log('fiAR', finalArr)
         setInterval(()=>{
-            if(win == true){
-                playerArr = []
-                win = false
-            }
-        }, 32000)
+            finalArr.sort(()=>Math.random() - 0.5);
+            shuffle(finalArr)
+            
+            
+            this.arrayText = this.add.text(25, 160, finalArr, {fontSize: '32px', fontweight: 'bold', fill: '#fff'})
+            this.arrayText.setStroke('#000', 6);
+            
+            setInterval(()=>{
+                this.arrayText.destroy()
+            }, 7000)
+            console.log('fiAR', finalArr)  
+        }, 30000)
+
+        // setInterval(()=>{
+        //     if(win == true){
+        //         playerArr = []
+        //         win = false
+        //     }
+        // }, 32000)
     
         cursors = this.input.keyboard.createCursorKeys();
     }
