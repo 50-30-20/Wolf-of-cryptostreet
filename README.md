@@ -7,6 +7,9 @@
 * The game is built with phaser 3 and deployed on kovan network.<br />
 * The game executes a swap on uniswap v2 with help of aave flashloans.
 
+# Demo Video
+* https://www.youtube.com/watch?v=gzoPUgIPxFM
+
 <h1>Glimpse of the Game</h1>
 <img src="https://i.imgur.com/52aX0nU.png" width="500" height="400" />
 <img src ='https://i.imgur.com/eCnhHHe.png' width="500" height='400' />
